@@ -37,6 +37,6 @@ A note on how this works: each version of Rimworld looks for files inside each v
 
 Moreover, common files used by all versions can remain on the root folders (outside specific version folders) or can be moved to a folder called `Common`, as you prefer. These files are read by all versions, as long as there isn't another file with the same name inside the specific version folders.
 
-You can read more about that in this guide by Tynan: https://docs.google.com/document/d/e/2PACX-1vSOOrF961tiBuNBIr8YpUvCWYScU-Wer3h3zaoMrw_jc8CCjMjlMzNCAfZZHTI2ibJ7iUZ9_CK45IhP/pub
+You can read more about that in [this guide by Tynan](https://docs.google.com/document/d/e/2PACX-1vSOOrF961tiBuNBIr8YpUvCWYScU-Wer3h3zaoMrw_jc8CCjMjlMzNCAfZZHTI2ibJ7iUZ9_CK45IhP/pub)
 
-That's it for this lesson. Not for compatibility with other mods!
+That's it for this lesson. Not for [compatibility with other mods](lesson5.md)!

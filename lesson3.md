@@ -2,11 +2,11 @@
 
 ## Requirements
 
-The requirements are the same as of Part 2
+The requirements are the same as of [Lesson 2](lesson2.md)
 
 ## Steps
 
-1. Create the basic mod structure from Part 1 (yes, each tutorial will start the same way).
+1. Create the basic mod structure from [Lesson 1](lesson1.md) (yes, each tutorial will start the same way).
 
 2. Decide what you want to create, and then think of something similar to that that already exists in the game. Example: let's create a new type of meal called Cornbread. Cornbread is similar to a simple meal, except it's made of corn and has different stats. 
 We're gonna think of cornbread as a modifyied simple meal.
@@ -127,4 +127,4 @@ It was also necessary to change the products of the recipe:
 That's it for this lesson. If you want to browse the code for mods that add things to the game, you can find dozens of them on github.com, for example, many of the Vanilla Expanded mods.
 In fact, if you want to make and publish your own mods, I highly recommend setting up a github and uploading them. Just as you can learn tons by reading and reusing code from other mods, maybe other people will also use your code as a reference to make their own mods.
 
-Next lesson will take a detour into how to make your mods compatible with several versions of Rimworld, and after that, we will look into how to male mods compatible with other mods, when you are altering the same things, or when you want to build up on other mods' work.
+Next lesson will take a detour into [how to make your mods compatible with several versions of Rimworld](lesson4.md), and after that, we will look into how to make mods compatible with other mods, when you are altering the same things, or when you want to build up on other mods' work.

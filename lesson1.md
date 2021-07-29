@@ -62,4 +62,4 @@ It does actually modify anything yet, but it's still cool.
 Basically, you can change anything that goes between an opening tag and the corresponding closing tag.
 
 That's it for this lesson! You learned to make the elements that *every single Rimworld mod* has, but from here on, you would have to do different things depending on what you want your mod to *do*.
-The next part will be about changing some trait of some thing on the game, using the mechanics the game already have.
+The [next part](lesson2.md) will be about changing some trait of some thing on the game, using the mechanics the game already have.

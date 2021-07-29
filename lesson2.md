@@ -22,7 +22,7 @@ But if you want to keep using notepad that's fine too.
 
 1. Decide what you want to change in the game. For example: I want to make muffalos give much more wool and lay chicken eggs in their spare time.
 
-2. Setup you mod as in Part 1. Change the mod name, id and description to match your purpose. Example of the `About.xml`:
+2. Setup you mod as in [Lesson 1](lesson1.md). Change the mod name, id and description to match your purpose. Example of the `About.xml`:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -163,5 +163,6 @@ I'll add this code to my `muffalo.xml` right below the other patch operation, so
 Let's see what this does!
 
 I loaded a game with starting muffalos using Scenario Editor and.... Yup! My muffalos now lay chicken eggs! That can hatch actual chicks! Amazing! You can really do whatever strikes your fancy with mods, lol.
+Check out the source for this example in [ExampleMod2](ExampleMod2).
 
-That was it for this lesson. Next, we should learn how to create new Defs to add entirely new things to the game!
+That was it for this lesson. Next, we should learn [how to create new Defs to add entirely new things to the game](lesson3.md)!

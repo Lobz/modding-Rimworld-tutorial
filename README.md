@@ -8,6 +8,13 @@ After making my first mod, I decided to create a series of very short, easy tuto
 
 Basically, I want to make the kind of guide I wish I had when I got here. I hope we can learn together.
 
+# Index
 
+1. [Your very first mod](lesson1.md)
+2. [Change some Thing](lesson2.md)
+3. [Create new things](lesson3.md)
+4. [Compatibility with different versions](lesson4.md)
+5. [Specific compatibility with other mods](lesson5.md)
+6. [Your very first DLL mod](lesson6.md)
 
 
