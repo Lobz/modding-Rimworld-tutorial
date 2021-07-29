@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="Muffalo"]/comps/li/woolAmount</xpath> <!-- this identifies which node you will be changing -->
+        <value> <!-- anything inside the value node will be added to the Def -->
+            <woolAmount>240</woolAmount>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="Muffalo"]/comps</xpath>
+        <value>
+        <li Class="CompProperties_EggLayer">
+            <eggUnfertilizedDef>EggChickenUnfertilized</eggUnfertilizedDef>
+            <eggFertilizedDef>EggChickenFertilized</eggFertilizedDef>
+            <eggFertilizationCountMax>1</eggFertilizationCountMax>
+            <eggLayIntervalDays>1</eggLayIntervalDays>
+            <eggCountRange>1</eggCountRange>
+        </li>
+        </value>
+    </Operation>
+
+</Patch>
