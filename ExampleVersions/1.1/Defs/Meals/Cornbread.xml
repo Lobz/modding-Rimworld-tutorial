@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="MealCooked">
+    <defName>Cornbread</defName>
+    <label>cornbread</label>
+    <description>A delicious, delicious cornbread. It's made out of corn. Obviously. -- version 1.1 or 1.2 --</description>
+    <graphicData>
+      <texPath>Things/Cornbread</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>20</MarketValue>
+      <WorkToMake>400</WorkToMake>
+      <Nutrition>0.9</Nutrition>
+    </statBases>
+    <ingestible>
+      <preferability>MealFine</preferability>
+      <tasteThought>AteFineMeal</tasteThought>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+    </ingestible>
+  </ThingDef>
+
+  <RecipeDef ParentName="CookMealBase">
+    <defName>CookCornbread</defName>
+    <label>cook cornbread</label>
+    <description>Cook a delicious cornbread.</description>
+    <jobString>Cooking cornbread.</jobString>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>false</allowMixingIngredients>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RawCorn</li>
+          </thingDefs>
+        </filter>
+        <count>0.75</count>
+      </li>
+    </ingredients>
+    <products>
+      <Cornbread>1</Cornbread>
+    </products>
+    <workSkill>Cooking</workSkill>
+    <skillRequirements>
+      <Cooking>3</Cooking>
+    </skillRequirements>
+  </RecipeDef>
+</Defs>
