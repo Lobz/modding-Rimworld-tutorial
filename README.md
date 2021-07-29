@@ -1,4 +1,4 @@
-# How to make a mod in Rimworld for absolute noobs
+# Modding Rimworld for absolute noobs
 
 # Introduction
 
