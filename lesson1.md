@@ -21,7 +21,7 @@ We want to get started right away, so use whatever you have on hand! Notepad is 
 
 2. In the Rimworld folder, open the Mods folder
 
-3. Make a new folder with your mod's name. I'll call mine "HelloWorld" This is your mod's folder! Open it.
+3. Make a new folder with your mod's name. I'll call mine [HelloWorld](HelloWorld) This is your mod's folder! Open it.
 
 4. Inside your mod folder, create new folder called `About` (mind the case).
 
@@ -45,7 +45,7 @@ We want to get started right away, so use whatever you have on hand! Notepad is 
     <description>
 Congratulations, you just set up your very first mod!
 
-It does actually modify anything yet, but it's still cool.
+It doesn't actually modify anything yet, but it's still cool.
     </description>
 </ModMetaData>
 ```

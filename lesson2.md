@@ -163,6 +163,6 @@ I'll add this code to my `muffalo.xml` right below the other patch operation, so
 Let's see what this does!
 
 I loaded a game with starting muffalos using Scenario Editor and.... Yup! My muffalos now lay chicken eggs! That can hatch actual chicks! Amazing! You can really do whatever strikes your fancy with mods, lol.
-Check out the source for this example in [ExampleMod2](ExampleMod2).
+Check out the source for this example in [EggLayingMuffalos](EggLayingMuffalos).
 
 That was it for this lesson. Next, we should learn [how to create new Defs to add entirely new things to the game](lesson3.md)!
