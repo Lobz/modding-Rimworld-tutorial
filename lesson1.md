@@ -21,7 +21,7 @@ We want to get started right away, so use whatever you have on hand! Notepad is 
 
 2. In the Rimworld folder, open the Mods folder
 
-3. Make a new folder with your mod's name. I'll call mine [HelloWorld](HelloWorld) This is your mod's folder! Open it.
+3. Make a new folder with your mod's name. I'll call mine `HelloWorld`. This is your mod's folder! Open it.
 
 4. Inside your mod folder, create new folder called `About` (mind the case).
 
@@ -50,15 +50,19 @@ It doesn't actually modify anything yet, but it's still cool.
 </ModMetaData>
 ```
 
-8. Now, open Rimworld and see the new mod, called "Hello, Modding World!", show up in the mod list. Click it to see the preview image, name, description, etc. You can launch a game with this mod on if you want.
-
-9. Change things up in the `About.xml` file to get a feel for it. Usually you're gonna want to change the name, author name, packageId, and description. You might have to reload the game to see the changes appear in the mod list. If you never saw a .xml file before, here's the basic idea: anything inside < these > is called a tag, and is a code word, and actual content goes between an opening tag and a closing tag (marked by a "/"), like this:
+**Note**: If you never saw a .xml file before, here's the basic idea: anything inside < these > is called a tag, and is the name of a trait or category of traits, and actual value or content goes between an opening tag and a closing tag (marked by a "/"), like this:
 
 ```xml
 <tag>Actual content</tag>
 <anotherTag>Another content</anotherTag>
+<myName>Oz</myName> <!-- my name is Oz -->
 ```
 
+A tag started with `<!--` and ended with `-->` is special, in that it's completely ignored by any software reading the file. This is called a comment, and is useful to leave notes to help with human understanding of the code.
+
+8. Now, open Rimworld and see the new mod, called "Hello, Modding World!", show up in the mod list. Click it to see the preview image, name, description, etc. You can launch a game with this mod on if you want, but it won't do anything.
+
+9. Change things up in the `About.xml` file to get a feel for it. Usually you're gonna want to change the name, author name, packageId, and description. You might have to reload the game to see the changes appear in the mod list.
 Basically, you can change anything that goes between an opening tag and the corresponding closing tag.
 
 That's it for this lesson! You learned to make the elements that *every single Rimworld mod* has, but from here on, you would have to do different things depending on what you want your mod to *do*.

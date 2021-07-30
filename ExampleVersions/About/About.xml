@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-    <name>Cornbread</name>
+    <name>Cornbreab Versions</name>
     <author>scrofula</author>
     <supportedVersions>
+        <li>1.0</li>
+        <li>1.1</li>
+        <li>1.2</li>
         <li>1.3</li>
     </supportedVersions>
-    <packageId>scrofula.cornbread</packageId>
+    <packageId>oz.cornbreadversions</packageId>
     <description>
-This mod lets your colonists bake delicious cornbread. It's made out of corn. Obviously.
+This mod adds cornbreads with different tags in the description depending on the game version.
 
 Cornbread image from https://commons.wikimedia.org/wiki/File:Coop%27s_West_Texas_BBQ_cornbread.jpg
     </description>
