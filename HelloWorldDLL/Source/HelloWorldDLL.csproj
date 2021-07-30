@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup> <!-- basic project properties -->
+    <AssemblyName>HelloWorld</AssemblyName> <!-- name of the generated DLL -->
+    <OutputPath>../Assemblies/</OutputPath> <!-- path to the generated DLL -->
+    <OutputType>Library</OutputType>        <!-- make a DLL, rather than a EXE -->
+
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion> <!-- your .NET version -->
+    <DebugType>none</DebugType>                             <!-- avois making extra debug files -->
+  </PropertyGroup>
+
+  <ItemGroup> <!-- other libraries that will be used in the mod -->
+    <Reference Include="Assembly-CSharp">
+      <HintPath>../../../RimWorldWin64_Data/Managed/Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>../../../RimWorldWin64_Data/Managed/UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup> <!-- list all code files here -->
+    <Compile Include="HelloWorld.cs" />
+  </ItemGroup>
+
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" /> <!-- this is so the compiler knows what "build" means -->
+</Project>

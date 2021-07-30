@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+    <name>Hello, C# Modding World!</name> <!-- The name of your mod in the mod list -->
+    <author>Oz</author>
+    <supportedVersions> <!-- the version(s) your mod supports -->
+        <li>1.1</li>
+        <li>1.2</li>
+        <li>1.3</li>
+    </supportedVersions>
+    <packageId>oz.helloworlddll</packageId> <!-- a unique identifier for your mod. Must contain only a-z and periods, no spaces. -->
+    <description>
+Congratulations, you just set up your very first DLL mod!
+
+Activate development mode and open log messages to say hello.
+    </description>
+</ModMetaData>
