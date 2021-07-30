@@ -67,7 +67,7 @@ Make sure you're downloading the SDK and not just the Runtime!
 
 ## Steps
 
-1. Set up your mod folder just as in [Lesson 1](lesson1.md).
+1. Set up your mod folder just as in [Lesson 1](lesson1.md). Make sure this folder is in the Mods folder in the RimWorld base folder, as we will be relying on the relative paths from there.
 
 2. In your mod folder, create a new folder called `Source`. This will contain you C# code.
 
@@ -78,8 +78,102 @@ Although it has a different extension, the content of this file is XML.
 4. Paste this inside your .csproj file:
 
 ```xml
+<?xml version="1.0" encoding="utf-8"?>
+
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup> <!-- basic project properties -->
+    <AssemblyName>HelloWorld</AssemblyName> <!-- name of the generated DLL -->
+    <OutputPath>../Assemblies/</OutputPath> <!-- path to the generated DLL -->
+    <OutputType>Library</OutputType>        <!-- make a DLL, rather than a EXE -->
+
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion> <!-- your .NET version -->
+    <DebugType>none</DebugType>                             <!-- avoid making extra debug files -->
+  </PropertyGroup>
+
+  <ItemGroup> <!-- other libraries that will be used in the mod -->
+    <Reference Include="Assembly-CSharp">
+      <HintPath>../../../RimWorldWin64_Data/Managed/Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>../../../RimWorldWin64_Data/Managed/UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup> <!-- list all code files here -->
+    <Compile Include="HelloWorld.cs" />
+  </ItemGroup>
+
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" /> <!-- this is so the compiler knows what "build" means -->
+</Project>
 
 ```
 
-5. 
+This xml file is clunky, but you need everything in there.
+I spend a LOT of time coming up with the minimal .csproj file that creates a functional mod.
+If you use Visual Studio to create this file, it will create something gigantic.
+
+5. If you're not on a 64 bit Windows installation, then where you read `RimWorldWin64_Data` in the paths to DLLs, you have to substitute for the name of your actual RimWorld data directory. Please check if this folder actually exists in the RimWorld folder.
+
+6. Still inside `Source`, create the file `HelloWorld.cs`. This is a C# code file.
+If you choose to create more files, or a file with a different name, just make sure to edit your `.csproj` file accordingly.
+
+7. I'm gonna use the same code as the one from the [wiki tutorial](https://rimworldwiki.com/wiki/Modding_Tutorials/Hello_World). Paste it in your `.cs` file:
+
+```cs
+using RimWorld;
+using Verse;
+
+namespace HelloWorld
+{
+    [StaticConstructorOnStartup]
+    public static class HelloWorld
+    {
+        static HelloWorld() //our constructor
+        {
+            Log.Message("Hello World!"); //Outputs "Hello World!" to the dev console.
+        }
+    }
+}
+```
+
+If you never worked in a similar before, it might be a bit difficult to explain what's going on here, but I'll try. The first two lines are saying we will be using things that come from these two namespaces. The namespaces contain parts of the codes from the RimWorld libraries that we will want to access from our mod. In this specific example, we are using `StaticConstructorOnStartup`, which is defined on `Verse`.
+
+In turn, our mod defines its own namespace. If a future code ever wants to reference it, it will have to start with `using HelloWorld`.
+
+Explaining what a class is is a bit much for the moment, so I'll just say that a static class functions as a way to organize methods that form a set. A constructor is a method with the same name as the class, that in this case, because of `StaticConstructorOnStartup`, will be called when RimWorld starts.
+
+The code inside the constructor is what really matters - everything else is just layers of encapsulation, for the sake of order and to avoid bugs and conflicts. This is important in large, complicated projects, such as a complex game with countless mod extensions.
+
+Anyway, when RimWorld starts, it will call upon the constructor, which will execute this command:
+
+```cs
+    Log.Message("Hello World!");
+```
+
+Which will, predictably, log a message saying "Hello World!".
+
+Ok, we have our project file and our code, but now we need to assemble it into a DLL. This is where we will need a terminal and the compiler.
+
+8. Open a terminal inside your `Source` folder (or open a terminal and navigate to your source folder using the `cd` command)
+
+9. In your terminal, run: 
+
+```
+dotnet build
+```
+
+10. When you press Enter, you should see a message in your terminal, saying you compiled successfully without errors. If you do get errors, it might be because you need to download the appropriate version of the .NET sdk. Any other error please let me know so I can make this tutorial error-proof!
+
+11. Check if your mod folder now has a folder called `Assemblies`, containing the file `HelloWorld.dll`.
+
+12. The compiler probably has created a folder called `obj` inside your `Source` folder. These are temporary files used during compilation. You can ignore it or delete it.
+
+13. Compiled succesfully? Time to test! Open Rimworld, and activate your mod!
+
+14. When RimWorld restarts, open the development log console, and check if the message "Hello World!" appears there. That's it! Congratulations, your very first DLL mod is working!
+
+That's it for this lesson. Maybe next lesson we can make a DLL mod that actually does something?
 
