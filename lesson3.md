@@ -119,8 +119,18 @@ It was also necessary to change the products of the recipe:
 11. Often you will need to patch up some other Def to work with your mod. In our example, we need to add the recipe to cornbread to the Campfire list of recipes. Like in Part 2, create a `Patches` folder, and a xml file containing patch operations.
 
 ```xml
-
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="Campfire"]/recipes</xpath>
+        <value>
+            <li>CookCornbread</li>
+        </value>
+    </Operation>
+</Patch>
 ```
+
+If you found the ThingDef for `Campfire` in the game files, you'd notice that there's a list of recipes that the campfire is able to cook. So, we're patching the campfire so that it's also able to cook our cornbread recipe. As a challenge, you can add this recipe to the other cooking stations, if you'd like.
 
 12. Time to test it again! Change your defs and patches until they are doing what you want them to do, and then you can use your mod, post it on the forum, or publish it on Steam from the Mods window in Rimworld!
 
