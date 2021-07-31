@@ -87,7 +87,6 @@ Although it has a different extension, the content of this file is XML.
     <OutputPath>../Assemblies/</OutputPath> <!-- path to the generated DLL -->
     <OutputType>Library</OutputType>        <!-- make a DLL, rather than a EXE -->
 
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion> <!-- your .NET version -->
     <DebugType>none</DebugType>                             <!-- avoid making extra debug files -->
   </PropertyGroup>
 
@@ -165,7 +164,7 @@ Ok, we have our project file and our code, but now we need to assemble it into a
 dotnet build
 ```
 
-10. When you press Enter, you should see a message in your terminal, saying you compiled successfully without errors. If you do get errors, it might be because you need to download the appropriate version of the .NET sdk. Any other error please let me know so I can make this tutorial error-proof!
+10. When you press Enter, you should see a message in your terminal, saying you compiled successfully without errors. If you do get errors, please let me know so I can make this tutorial error-proof!
 
 11. Check if your mod folder now has a folder called `Assemblies`, containing the file `HelloWorld.dll`.
 

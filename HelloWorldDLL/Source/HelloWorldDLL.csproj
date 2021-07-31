@@ -7,7 +7,6 @@
     <OutputPath>../Assemblies/</OutputPath> <!-- path to the generated DLL -->
     <OutputType>Library</OutputType>        <!-- make a DLL, rather than a EXE -->
 
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion> <!-- your .NET version -->
     <DebugType>none</DebugType>                             <!-- avois making extra debug files -->
   </PropertyGroup>
 
