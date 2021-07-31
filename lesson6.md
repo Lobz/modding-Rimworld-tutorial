@@ -40,21 +40,16 @@ You can find in-depth information on DLLs in [Wikipedia](https://en.wikipedia.or
 
 Being a binary file means that a DLL is a *compiled* library. Similarly, a binary executable file such as RimworldWin64.exe is a *compiled* program. This means that their code was written in a compiled programming language such as C, C++, Java, or C#, that was then read by a program called a compiler and turned into machine-code.
 
-This is different from programing in *interpreted* programming languages or scripting languages, such as PHP, Javascript or Python, in which the code is executed while it is read, with no prior assembly.
-The XML files in your mod (and in Core) also fall under this category, since they are interpreted by Rimworld as is runs.
+This is different from programing in *interpreted* programming languages or scripting languages, such as PHP, JavaScript or Python, in which the code is executed while it is read, with no prior assembly.
+The XML files in your mod (and in Core) also fall under this category, since they are interpreted by Rimworld as it runs.
 
-The main advantage of compiling is that it makes the program extremely efficient. The compiler does the work of translating the code to machine-code at compiling-time, so that the program doesn't have to at run-time. Also, modern compilers have many built-in optimizations to make the most efficient machine-code. Back in the day, when computers were less powerful and compilers less efficient, complex games had to be programmed directly in Assembly (a type of machine-code). Nowadays, we rely on powerful languages and compilers to make games that run smoothly but don't take so much work to code. 
+The main advantage of compiling is that it makes the program extremely efficient. The compiler does the work of translating the code to machine-code at compiling-time, so that the program doesn't have to do it at run-time. Also, modern compilers have many built-in optimizations to make the most efficient machine-code. Back in the day, when computers were less powerful and compilers less efficient, complex games had to be programmed directly in Assembly (a type of machine-code). Nowadays, we rely on powerful languages and compilers to make games that run smoothly but don't take so much work to code. 
 
-Rimworld is coded in C# (pronounced "C-Sharp"), a languaged created by Microsoft. You can read more about in in [Wikipedia](https://en.wikipedia.org/wiki/C_Sharp_(programming_language). To make mods interact smoothly with the core Rimworld libraries, we need to code in C# as well.
+Rimworld is coded in C# (pronounced "C-Sharp"), a languaged created by Microsoft. You can read more about in in [Wikipedia](https://en.wikipedia.org/wiki/C_Sharp_(programming_language)). To make mods interact smoothly with the core Rimworld libraries, we need to code in C# as well.
 
 ## You will need
 
-It must have become clear that only a text editor will not be enough anymore.
-Usually at this point the tutorials will tell you to install Microsoft Visual Studio and go around pression buttons to make the software do everything for you.
-
-Well! I dislike spending my time pressing buttons when I could very well copy some lines of text, and I actually hate being forced to use one specific software that does everything.
-So this tutorial will *not* use Microsoft Visual Studio.
-Instead, you will need:
+It must have become clear that only a text editor will not be enough anymore. Usually at this point the tutorials will tell you to install Microsoft Visual Studio, but that is not really required. Instead, what you *actually* need is:
 
 - A text editor (any text editor will do)
 
@@ -138,7 +133,7 @@ namespace HelloWorld
 }
 ```
 
-If you never worked in a similar before, it might be a bit difficult to explain what's going on here, but I'll try. The first two lines are saying we will be using things that come from these two namespaces. The namespaces contain parts of the codes from the RimWorld libraries that we will want to access from our mod. In this specific example, we are using `StaticConstructorOnStartup`, which is defined on `Verse`.
+If you never worked in a similar language before, it might be a bit difficult to explain what's going on here, but I'll try. The first two lines are saying we will be using things that come from these two namespaces. The namespaces contain parts of the codes from the RimWorld libraries that we will want to access from our mod. In this specific example, we are using `StaticConstructorOnStartup`, which is defined on `Verse`.
 
 In turn, our mod defines its own namespace. If a future code ever wants to reference it, it will have to start with `using HelloWorld`.
 
