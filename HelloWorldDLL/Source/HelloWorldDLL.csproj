@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup> <!-- list all code files here -->
-    <Compile Include="HelloWorld.cs" />
+    <Compile Include="*.cs" />
   </ItemGroup>
 
   <!-- attention: path below may be subject to change -->

@@ -75,14 +75,14 @@ Although it has a different extension, the content of this file is XML.
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 
-<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project>
 
   <PropertyGroup> <!-- basic project properties -->
     <AssemblyName>HelloWorld</AssemblyName> <!-- name of the generated DLL -->
     <OutputPath>../Assemblies/</OutputPath> <!-- path to the generated DLL -->
     <OutputType>Library</OutputType>        <!-- make a DLL, rather than a EXE -->
 
-    <DebugType>none</DebugType>                             <!-- avoid making extra debug files -->
+    <DebugType>none</DebugType>             <!-- avoid making extra debug files -->
   </PropertyGroup>
 
   <ItemGroup> <!-- other libraries that will be used in the mod -->
@@ -96,11 +96,11 @@ Although it has a different extension, the content of this file is XML.
     </Reference>
   </ItemGroup>
 
-  <ItemGroup> <!-- list all code files here -->
-    <Compile Include="HelloWorld.cs" />
+  <ItemGroup> <!-- this will include all .cs files to be compiled -->
+    <Compile Include="*.cs" />
   </ItemGroup>
 
-  <!-- attention: path below may have to be changed on your computer -->
+  <!-- attention: path below may be different on your computer -->
   <Import Project="C:\Program Files\dotnet\sdk\5.0.302\Microsoft.CSharp.targets" />
 </Project>
 
@@ -114,8 +114,7 @@ If you use Visual Studio to create this file, it will create something gigantic.
 
 5. If you're not on a 64 bit Windows installation, then where you read `RimWorldWin64_Data` in the paths to DLLs, you have to substitute for the name of your actual RimWorld data directory. Please check if this folder actually exists in the RimWorld folder.
 
-6. Still inside `Source`, create the file `HelloWorld.cs`. This is a C# code file.
-If you choose to create more files, or a file with a different name, just make sure to edit your `.csproj` file accordingly.
+6. Still inside `Source`, create a file with the extension `.cs`. This is a C# code file.
 
 7. I'm gonna use the same code as the one from the [wiki tutorial](https://rimworldwiki.com/wiki/Modding_Tutorials/Hello_World). Paste it in your `.cs` file:
 
