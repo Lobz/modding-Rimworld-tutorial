@@ -100,6 +100,7 @@ Although it has a different extension, the content of this file is XML.
     <Compile Include="HelloWorld.cs" />
   </ItemGroup>
 
+  <!-- attention: path below may have to be changed on your computer -->
   <Import Project="C:\Program Files\dotnet\sdk\5.0.302\Microsoft.CSharp.targets" />
 </Project>
 
