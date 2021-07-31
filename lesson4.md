@@ -15,7 +15,7 @@ If your mod works on each version, you don't have to do anything. Let's assume t
 3. Select the lowest numbered version in which your mod works. In your mod folder, create a folder names after this folder.
 Example: if your mod works in 1.1, but not 1.0, create a folder called `1.1`. I'm gonna call that the working version folder.
 
-4. Figure out the files you will have to edit to solve the errors, and move them into this version folder, *maintaining the folder structure* inside. Example: I detected the error in the file `Defs/Meals/Cornbread.xml`, so I'll create `Defs` and `Foods` folders so I can move my .xml file to `1.1/Defs/Meals/Cornbread.xml`. You can choose to copy whole folders into the version folder, if you prefer, but I think it's neater to move only the files that will be altered. Definetly don't move any image or sound files unless you absolutely need to. Remember to test you mod again after you do this.
+4. Figure out the files you will have to edit to solve the errors, and move them into this version folder, *maintaining the folder structure* inside. Example: I detected the error in the file `Defs/Meals/Cornbread.xml`, so I'll create `Defs` and `Meals` folders so I can move my .xml file to `1.1/Defs/Meals/Cornbread.xml`. You can choose to copy whole folders into the version folder, if you prefer, but I think it's neater to move only the files that will be altered. Definitely don't move any image or sound files unless you absolutely need to. Remember to test you mod again after you do this.
 **Note**: you will probably have to come back to this step a few times while you make your fix for other versions, to add more files as you figure out you need to edit them.
 
 5. Let's first work on updating to higher versions. Moving up the versions list, select the first version where your mod doesn't work, and create a folder named after that version. Example: if your mod works in 1.2 but not in 1.3, create a folder called `1.3`.
@@ -37,6 +37,6 @@ A note on how this works: each version of Rimworld looks for files inside each v
 
 Moreover, common files used by all versions can remain on the root folders (outside specific version folders) or can be moved to a folder called `Common`, as you prefer. These files are read by all versions, as long as there isn't another file with the same name inside the specific version folders.
 
-You can read more about that in [this guide by Tynan](https://docs.google.com/document/d/e/2PACX-1vSOOrF961tiBuNBIr8YpUvCWYScU-Wer3h3zaoMrw_jc8CCjMjlMzNCAfZZHTI2ibJ7iUZ9_CK45IhP/pub)
+You can read more about that in [this guide by Tynan](https://docs.google.com/document/d/e/2PACX-1vSOOrF961tiBuNBIr8YpUvCWYScU-Wer3h3zaoMrw_jc8CCjMjlMzNCAfZZHTI2ibJ7iUZ9_CK45IhP/pub).
 
 That's it for this lesson. Not for [compatibility with other mods](lesson5.md)!
