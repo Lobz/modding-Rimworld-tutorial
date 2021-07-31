@@ -14,7 +14,7 @@ You're gonna need to be able to:
 
 - "Find in files", that is, search for one word inside all of the files in a folder. This is gonna be essential for finding where the things you want to mod are defined.
 
-Since we're gonna start messing with Tynan's code, you might want to have on hand a text editor that also does Syntax Highlighting (that is, it colors the xml all pretty-like to make it easier to read, with tags in one color and content in another). At this point, you might as well install an IDE. I honestly reccomend Visual Studio Code, since it's very simple and extendable and free. But eh, everyone uses something different, and I myself have used a dozen different setups over the years. One advantage of using a tool like this is that you can do all three things I mentioned above in the same window.
+Since we're gonna start messing with Ludeon's code, you might want to have on hand a text editor that also does Syntax Highlighting (that is, it colors the xml all pretty-like to make it easier to read, with tags in one color and content in another). At this point, you might as well install an IDE. I honestly recommend Visual Studio Code, since it's very simple and extendable and free. But eh, everyone uses something different, and I myself have used a dozen different setups over the years. One advantage of using a tool like this is that you can do all three things I mentioned above in the same window.
 
 But if you want to keep using notepad that's fine too. 
 
@@ -41,7 +41,7 @@ This mod makes muffalos produce much more wool and lay chiken eggs. I totally cr
 </ModMetaData>
 ```
 
-3. Now, we're gonna look for the thing we want to modify. Open the Rimworld folder, and inside that, open the Data folder. This folder is like the Mods folder, but for official content made by Tynan. Inside you will find a Core folder, and folders for any DLCs you have. Unless you want to change something DLC-exclusive, the thing you're looking for is in Core. Notice that each of these is exactly like a mod folder, with an `About.xml` and a `Preview.png` image and a few other things.
+3. Now, we're gonna look for the thing we want to modify. Open the Rimworld folder, and inside that, open the Data folder. This folder is like the Mods folder, but for official content made by Ludeon. Inside you will find a Core folder, and folders for any DLCs you have. Unless you want to change something DLC-exclusive, the thing you're looking for is in Core. Notice that each of these is exactly like a mod folder, with an `About.xml` and a `Preview.png` image and a few other things.
 
 4. Inside Core, open the Defs folder. This is the folder you use when defining new things. Since this is core, it has an ungodly ammount of subfolders and files defining every single aspect of the Rim. I you want, feel free to spend time exploring the files and marveling at the sheer ammount of stuff defined in them. Look for tags such as `<label>` and `<description>` to understand what is being defined, and everything else to understand what are the actual traits and stats of those things. Realize that every single thing defined in those files can be changed.
 
@@ -97,7 +97,7 @@ The actual code will go in between the opening and closing `Patch` tags.
 
 </Patch>
 ```
-Notes about what was changed: in the beggining of the muffalo's Def I saw the first tag was `<ThingDef ParentName="AnimalThingBase>`. This is a Def for a Thing, or a ThingDef, so I have to put it in the `<xpath>`. The `defName` is on the first line of the Def, and it will allow the program to find the exact Def we want. Then, we need to give the path to the node we want: `woolAmount` is inside a node tagged `li`, inside a node called `comp`. Most nodes are inside other nodes, and you can identify that by paying attention to the order of opening and closing tags, and to the indentation (the ammount of space before a line -- more spaces mean more nested nodes) 
+Notes about what was changed: in the beggining of the muffalo's Def I saw the first tag was `<ThingDef ParentName="AnimalThingBase>`. This is a Def for a Thing, or a ThingDef, so I have to put it in the `<xpath>`. The `defName` is on the first line of the Def, and it will allow the program to find the exact Def we want. Then, we need to give the path to the node we want: `woolAmount` is inside a node tagged `li`, inside a node called `comp`. Most nodes are inside other nodes, and you can identify that by paying attention to the order of opening and closing tags, and to the indentation (the ammount of space before a line -- more spaces mean more nested nodes). 
 
 14. It's done! Save your file, enter Rimworld. Activate development mode in the Options so you can see bug reports if it fails. In the Mods window, deactivate all other unrelated mods, activate your mod, and check if it's working! You can start a scenario with the things you changed to make it easier to check. Congratulations! You made your first functional mod!!
 

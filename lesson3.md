@@ -9,7 +9,7 @@ The requirements are the same as of [Lesson 2](lesson2.md)
 1. Create the basic mod structure from [Lesson 1](lesson1.md) (yes, each tutorial will start the same way).
 
 2. Decide what you want to create, and then think of something similar to that that already exists in the game. Example: let's create a new type of meal called Cornbread. Cornbread is similar to a simple meal, except it's made of corn and has different stats. 
-We're gonna think of cornbread as a modifyied simple meal.
+We're gonna think of cornbread as a modified simple meal.
 
 3. As in Part 2, search inside `Rimworld/Data/Core/Defs` for the thing you're gonna work from. Also look up any ingredients or workstations that might be affected. Example: searching for `simple meal` reveals both a Def for simple meal and a recipe for cooking simple meals. We will need both of them to be able to cook these meals. I looked up `raw corn` for the ingredient and `campfire` for the cooking station.
 
@@ -101,7 +101,7 @@ It was also necessary to change the products of the recipe:
         </products>
 ```
 
-7. At this point, turn on development mode on Rimwolrd and test your mod by opening it in a scenario with the element you are creating. It should appear as an option in the scenario editor, and it should work, but often you will see details to be corrected. In our example, we can quickly notice two issues: the graphics are the same as the simple meal, and the bill for making cornbread doesn't appear in the campfire!
+7. At this point, turn on development mode on Rimworld and test your mod by opening it in a scenario with the element you are creating. It should appear as an option in the scenario editor, and it should work, but often you will see details to be corrected. In our example, we can quickly notice two issues: the graphics are the same as the simple meal, and the bill for making cornbread doesn't appear in the campfire!
 
 8. It's time to add custom graphics! (Skip to 11 if you don't need graphics) In your mod folder, create a folder called `Texture`, and inside it, a folder for the thing you are creating. You can also create as many subfolders as you want, for organization. Example: inside of `Textures`, we create a folder called `Things`, and then a folder called `Cornbread` inside of `Things`.
 
