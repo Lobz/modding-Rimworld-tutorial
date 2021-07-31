@@ -105,7 +105,7 @@ Although it has a different extension, the content of this file is XML.
     <Compile Include="HelloWorld.cs" />
   </ItemGroup>
 
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" /> <!-- this is so the compiler knows what "build" means -->
+  <Import Project="C:\Program Files\dotnet\sdk\5.0.302\Microsoft.CSharp.targets" />
 </Project>
 
 ```
@@ -113,6 +113,8 @@ Although it has a different extension, the content of this file is XML.
 This xml file is clunky, but you need everything in there.
 I spend a LOT of time coming up with the minimal .csproj file that creates a functional mod.
 If you use Visual Studio to create this file, it will create something gigantic.
+
+5. Find your dotnet folder in your file system (probably under Program Files). Check if the path to the file `Microsoft.CSharp.targets` is correct. You may have to change the version number in the path.
 
 5. If you're not on a 64 bit Windows installation, then where you read `RimWorldWin64_Data` in the paths to DLLs, you have to substitute for the name of your actual RimWorld data directory. Please check if this folder actually exists in the RimWorld folder.
 
