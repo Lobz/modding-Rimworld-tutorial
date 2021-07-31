@@ -25,5 +25,5 @@
     <Compile Include="HelloWorld.cs" />
   </ItemGroup>
 
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" /> <!-- this is so the compiler knows what "build" means -->
+  <Import Project="C:\Program Files\dotnet\sdk\5.0.302\Microsoft.CSharp.targets" />
 </Project>
