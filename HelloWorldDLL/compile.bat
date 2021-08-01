@@ -1,0 +1,1 @@
+csc -t:library -out:Assemblies/library.dll -r:"..\..\RimWorldWin64_Data\Managed/Assembly-CSharp.dll" Source/*.cs
