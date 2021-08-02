@@ -16,7 +16,7 @@ You're gonna need to be able to:
 
 Since we're gonna start messing with Ludeon's code, you might want to have on hand a text editor that also does Syntax Highlighting (that is, it colors the xml all pretty-like to make it easier to read, with tags in one color and content in another). At this point, you might as well install an IDE. I honestly recommend Visual Studio Code, since it's very simple and extendable and free. But eh, everyone uses something different, and I myself have used a dozen different setups over the years. One advantage of using a tool like this is that you can do all three things I mentioned above in the same window.
 
-But if you want to keep using notepad that's fine too. 
+But if you want to keep using notepad that's fine too.
 
 ## Steps
 
@@ -45,11 +45,13 @@ This mod makes muffalos produce much more wool and lay chiken eggs. I totally cr
 
 4. Inside Core, open the Defs folder. This is the folder you use when defining new things. Since this is core, it has an ungodly ammount of subfolders and files defining every single aspect of the Rim. I you want, feel free to spend time exploring the files and marveling at the sheer ammount of stuff defined in them. Look for tags such as `<label>` and `<description>` to understand what is being defined, and everything else to understand what are the actual traits and stats of those things. Realize that every single thing defined in those files can be changed.
 
+**Note:** if you're having trouble understanding the Defs because of the XML language, you can take a break to read the [Introduction to XML](https://www.w3schools.com/XML/default.asp) by W3Schools.
+
 5. Find the Def of the thing you want to change. This is where a "find in files" tool comes in handy. Example: I want to change the muffallos, so I'll look for `muffalo`. The word appears in a lot of different files, but I want the main Def for muffalo, so I'll look for `<label>muffalo</label>`. Huh. It turns out that there are two Defs labeled muffalo. That's ok. I'll keep both open for now.
 
 6. Find the tags of the traits you want to change. Example: looking through the tags I quickly find one called `<woolAmount>`. I want to change the value from 120 to 240.
 
-7. If you just want to change a numerical value, you can skip this. But, if you want to make a bigger change, first look for the Def of something else that has the traits you want to add to the thing. Example: I want muffalos to lay eggs, so I'll look up the Def for chickens and find anything for eggs.
+7. If you just want to change a numerical value like wool amount, you can skip this. But, if you want to make a bigger change, first look for the Def of something else that has the traits you want to add to the thing. Example: I want muffalos to lay eggs, so I'll look up the Def for chickens and find anything for eggs.
 
 8. Now back in your mod folder, create a subfolder called `Patches`. This folder will contain code that modifies things that already exist in the game. Inside it, create a new .xml file. You can call it what you want. Example: I created the file `muffalo.xml`.
 
@@ -83,7 +85,28 @@ The actual code will go in between the opening and closing `Patch` tags.
 
 </Patch>
 ```
-13. Change the "example" words for what you actually want, like so:
+13. PatchOperations have two main nodes: the `xpath` and the `value`. The `xpath` node indicates what node you will be affecting, and the `value` contains the code to be added. First, we need to figure out the `xpath`. This means figuring out the parent-nodes from the node you want to change, and put them in order, as if they were a sequence of folders inside folders in a file system. For example: in the beggining of the muffalo's Def I saw the first tag was `<ThingDef ParentName="AnimalThingBase>`. This is a Def for a Thing, or a ThingDef, so I have to put it in the `<xpath>`. The `defName` is on the first line of the Def, and it will allow the program to find the exact Def we want. Then, we need to give the path to the node we want: `woolAmount` is inside a node tagged `li`, inside a node called `comp`. Most nodes are inside other nodes, and you can identify that by paying attention to the order of opening and closing tags, and to the indentation (the ammount of space before a line -- more spaces mean more nested nodes). My `xpath` for `woolAmount` looks like this:
+
+```xml
+    <xpath>/Defs/ThingDef[defName="Muffalo"]/comps/li/woolAmount</xpath> <!-- this identifies which node you will be changing -->
+```
+
+If you're having trouble with **xml pathing**, here are excellent resources:
+
+- [Xpath generator](https://xmltoolbox.appspot.com/xpath_generator.html) from XmlToolBox. Here, you can just paste the whole Def you're trying to affect, and click on the node you want, and it will give you a path to that node. Just remember to change the selector of ThingDef to DefName rather than ParentName or whatever the Xpath generator will use by default.
+
+- [A quick tutorial of xpathing and patching](https://ludeon.com/forums/index.php?topic=32785.0) by minimurgle on the Forum
+
+- [XPath Tutorial](https://www.w3schools.com/xml/xpath_intro.asp) on the W3Schools website
+
+13. Next, we need to change the `value`. This is the new code you are adding to the Def. In my case, I want a new `woolAmount` node, so my value is this:
+
+```xml
+    <woolAmount>240</woolAmount>
+```
+
+13. All things added together, the whole Patch file looks like this:
+
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
@@ -97,7 +120,6 @@ The actual code will go in between the opening and closing `Patch` tags.
 
 </Patch>
 ```
-Notes about what was changed: in the beggining of the muffalo's Def I saw the first tag was `<ThingDef ParentName="AnimalThingBase>`. This is a Def for a Thing, or a ThingDef, so I have to put it in the `<xpath>`. The `defName` is on the first line of the Def, and it will allow the program to find the exact Def we want. Then, we need to give the path to the node we want: `woolAmount` is inside a node tagged `li`, inside a node called `comp`. Most nodes are inside other nodes, and you can identify that by paying attention to the order of opening and closing tags, and to the indentation (the ammount of space before a line -- more spaces mean more nested nodes). 
 
 14. It's done! Save your file, enter Rimworld. Activate development mode in the Options so you can see bug reports if it fails. In the Mods window, deactivate all other unrelated mods, activate your mod, and check if it's working! You can start a scenario with the things you changed to make it easier to check. Congratulations! You made your first functional mod!!
 
