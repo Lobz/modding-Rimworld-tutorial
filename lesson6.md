@@ -6,10 +6,10 @@ The tutorial for making a DLL mod was getting cluttered with too much theory, so
 
 You can make an infinite variety of things with only Defs and Patches, but there are still limits. With XML, you can only mix and match functionality that already exists in some part of the game. You need a more powerful tool when you want to add some completely new mechanic that doesn't exist anywhere in the game.
 
-You want to create a fire-breathing dragon? You can *probably* patch it up with some lines from the Defs of animals, some from flame-throwers, and maybe a few from monsters that have ranged attacks like some mechanoids. But you want it to hoard gold in a cave? Well... ok I guess if you make the dragon into a raider... but no, I don't think raiders can be set to steal specific things... and you definetly can't make a gold hoard in your map, but you can make like a quest map for it... Hmm, it would be tricky and probably clunky... At this point you might be better off coding the behaviour in a new DLL.
+You want to create a fire-breathing dragon? You can make a big predator that looks like a dragon with only xml, but you will need a DLL that adds the flame breath code, and to make the animal control this ranged weapon.
 
 DLL mods are mods that add completely new functionality to the game by adding a **Dynamic-Link Library** (DLL).
-Just because you have to create a DLL doesn't mean your mod is complicated. Other, simpler examples of mods that would have to be DLL mods (unless a game update adds something similar):
+Just because you have to create a DLL doesn't mean your mod is complicated. Simple examples of mods that would have to be DLL mods (unless a game update adds something similar):
 
 - A bear that hibernates in winter
 
