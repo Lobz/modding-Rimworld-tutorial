@@ -25,7 +25,7 @@ We want to get started right away, so use whatever you have on hand! Notepad is 
 
 4. Inside your mod folder, create new folder called `About` (mind the case).
 
-5. Choose a .png image file for your mod preview image. Copy this file into the `About` folder, and rename it to `Preview.png`. 
+5. Choose a .png image file for your mod preview image. Copy this file into the `About` folder, and rename it to `Preview.png`.
 
 6. Inside the `About` folder, create a new text file called `About.xml`. Mind the extension! If you use windows you might need to set an option to "show file extensions" on your file explorer. I've heard some people create a file called `About.txt` and then change the extension later on. That's fine, as long as you don't forget. Now let's talk about the contents of this file.
 
@@ -40,6 +40,8 @@ We want to get started right away, so use whatever you have on hand! Notepad is 
         <li>1.1</li>
         <li>1.2</li>
         <li>1.3</li>
+        <li>1.4</li>
+        <li>1.5</li>
     </supportedVersions>
     <packageId>johndoe.helloworld</packageId> <!-- a unique identifier for your mod. Must contain only a-z and periods, no spaces. -->
     <description>
@@ -58,7 +60,7 @@ It doesn't actually modify anything yet, but it's still cool.
 <myName>Oz</myName> <!-- my name is Oz -->
 ```
 
-A tag started with `<!--` and ended with `-->` is special, in that it's completely ignored by any software reading the file. This is called a comment, and is useful to leave notes to help with human understanding of the code.
+A tag started with `<!--` and ended with `-->` is special, in that it's completely ignored by any software reading the file. This is called a comment, and it's useful for leaving notes to help people understand your code.
 
 8. Now, open Rimworld and see the new mod, called "Hello, Modding World!", show up in the mod list. Click it to see the preview image, name, description, etc. You can launch a game with this mod on if you want, but it won't do anything.
 
@@ -66,4 +68,4 @@ A tag started with `<!--` and ended with `-->` is special, in that it's complete
 Basically, you can change anything that goes between an opening tag and the corresponding closing tag.
 
 That's it for this lesson! You learned to make the elements that *every single Rimworld mod* has, but from here on, you would have to do different things depending on what you want your mod to *do*.
-The [next part](lesson2.md) will be about changing some trait of some thing on the game, using the mechanics the game already have.
+The [next part](lesson2.md) will be about changing some trait of some thing on the game, using the mechanics the game already has.
