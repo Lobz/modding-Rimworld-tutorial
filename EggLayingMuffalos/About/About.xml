@@ -6,9 +6,11 @@
         <li>1.1</li>
         <li>1.2</li>
         <li>1.3</li>
+        <li>1.4</li>
+        <li>1.5</li>
     </supportedVersions>
     <packageId>oz.egglayingwoolymuffalos</packageId> <!-- a unique identifier for your mod. Must contain only a-z and periods, no spaces. -->
     <description>
-This mod makes muffalos produce much more wool and lay chiken eggs. I totally created it just for the lolz.
+This mod makes muffalos produce much more wool and lay chicken eggs. I totally created it just for the lolz.
     </description>
 </ModMetaData>

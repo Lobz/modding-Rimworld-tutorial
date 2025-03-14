@@ -8,10 +8,10 @@ The requirements are the same as of [Lesson 2](lesson2.md)
 
 1. Create the basic mod structure from [Lesson 1](lesson1.md) (yes, each tutorial will start the same way).
 
-2. Decide what you want to create, and then think of something similar to that that already exists in the game. Example: let's create a new type of meal called Cornbread. Cornbread is similar to a simple meal, except it's made of corn and has different stats. 
+2. Decide what you want to create, and then think of something similar to that that already exists in the game. Example: let's create a new type of meal called Cornbread. Cornbread is similar to a simple meal, except it's made of corn and has different stats.
 We're gonna think of cornbread as a modified simple meal.
 
-3. As in Part 2, search inside `Rimworld/Data/Core/Defs` for the thing you're gonna work from. Also look up any ingredients or workstations that might be affected. Example: searching for `simple meal` reveals both a Def for simple meal and a recipe for cooking simple meals. We will need both of them to be able to cook these meals. I looked up `raw corn` for the ingredient and `campfire` for the cooking station.
+3. As in Lesson 2, search inside `Rimworld/Data/Core/Defs` for the thing you're gonna work from. Also look up any ingredients or workstations that might be affected. Example: searching for `simple meal` reveals both a Def for simple meal and a recipe for cooking simple meals. We will need both of them to be able to cook these meals. I looked up `raw corn` for the ingredient and `campfire` for the cooking station.
 
 4. In your mod folder, create a folder called `Defs`, and inside it, a .xml file. Copy the following code into your file:
 

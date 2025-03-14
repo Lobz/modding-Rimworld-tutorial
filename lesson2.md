@@ -22,7 +22,7 @@ But if you want to keep using notepad that's fine too.
 
 1. Decide what you want to change in the game. For example: I want to make muffalos give much more wool and lay chicken eggs in their spare time.
 
-2. Setup you mod as in [Lesson 1](lesson1.md). Change the mod name, id and description to match your purpose. Example of the `About.xml`:
+2. Setup you mod as in [Lesson 1](lesson1.md). Change the mod name, id and description to match your purpose. Example `About.xml`:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -33,10 +33,12 @@ But if you want to keep using notepad that's fine too.
         <li>1.1</li>
         <li>1.2</li>
         <li>1.3</li>
+        <li>1.4</li>
+        <li>1.5</li>
     </supportedVersions>
     <packageId>oz.egglayingwoolymuffalos</packageId> <!-- a unique identifier for your mod. Must contain only a-z and periods, no spaces. -->
     <description>
-This mod makes muffalos produce much more wool and lay chiken eggs. I totally created it just for the lolz.
+This mod makes muffalos produce much more wool and lay chicken eggs. I totally created it just for the lolz.
     </description>
 </ModMetaData>
 ```
